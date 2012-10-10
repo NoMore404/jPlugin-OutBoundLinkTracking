@@ -15,8 +15,8 @@
 	]]>
 	</description>	
 	<files>
+		<filename plugin="outboundtracking">outboundtracking.xml</filename>
 		<filename plugin="outboundtracking">outboundtracking.php</filename>
-		<filename plugin="outboundtracking">index.html</filename>
 	</files>
   <params>
 	  <param name="@spacer1" type="spacer" default="Include Google Analytics:" label="" description="" />  
