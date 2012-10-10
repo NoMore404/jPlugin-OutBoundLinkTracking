@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system">
+	<name>System - GA Outbound Tracking</name>
+	<author>No More 404</author>
+	<creationDate>Oct 2012</creationDate>
+	<copyright>Copyright (C) 2010 www.nomore404.nl. All rights reserved.</copyright>
+	<license>http://opensource.org/licenses/MIT MIT</license>
+	<authorUrl>http://www.nomore404.nl</authorUrl>
+	<version>1.1</version>
+    <description>
+	<![CDATA[
+	<h2>Google Analytics Outbound Tracking</h2>
+	<p>Dont forget to activate the plugin, for activation go to Extensions > Plugin Management. Then find the "System - GA Outbound Tracking" plugin and click the red circle to make it go green. The plugin is activated when the circle is green, when the circle is red the plugin is deactivated.</p>
+	<p>To setup Google Analytics tracking you need to make a google analytics account on <a href="http://www.google.com/intl/en/analytics/" target="_blank">Google Analytics</a>. If you have an account then find the plugin in the plugin management and open it up by clicking on the name. To the right you will find a box to enter your Google Analytics ID ( looks like this: UA-XXXXX-X ). To contact us, go to <a href="http://www.nomore404.nl" target="_blank">No More 404</a>.</p>
+	]]>
+	</description>	
+	<files>
+		<filename plugin="outboundtracking">outboundtracking.php</filename>
+		<filename plugin="outboundtracking">index.html</filename>
+	</files>
+	<config>
+	  <fields name="params" addfieldpath="/plugins/system">
+	  	<fieldset name="basic">
+		  <field name="spacer1" type="spacer" default="" label="Google Analytics ID" description="" />
+		  <field name="googleid" type="text" default="" label="Google Analytics ID" description="Enter your Google Analytics ID (UA-XXXXX-X)"/>
+		  <field name="spacer2" type="spacer" default="" label="Would you like to load jQuery?" description="" />
+		</fieldset>		
+	  </fields>
+	</config>		
+</extension>
