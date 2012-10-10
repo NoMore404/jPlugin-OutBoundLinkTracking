@@ -5,13 +5,13 @@
  * @author		No More 404
  * @copyright	Copyright (c) 2012 NoMore404.nl
  * @license		MIT license: http://opensource.org/licenses/MIT
- * @version     Joomla 2.5
+ * @version     Joomla 1.5
  */
  
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport( 'joomla.plugin.plugin' );
-jimport( 'joomla.html.parameter' );
+
 
 class plgSystemOutboundTracking extends JPlugin {
 
