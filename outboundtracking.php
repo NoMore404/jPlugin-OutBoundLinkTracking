@@ -1,16 +1,17 @@
 <?php
 
 /**
- * @package		GA Outbound Click Tracking - Plugin for Joomla 3.0!
+ * @package		GA Outbound Click Tracking - Plugin for Joomla 2.5!
  * @author		No More 404
  * @copyright	Copyright (c) 2012 NoMore404.nl
  * @license		MIT license: http://opensource.org/licenses/MIT
+ * @version     Joomla 2.5
  */
  
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport( 'joomla.plugin.plugin' );
-
+jimport( 'joomla.html.parameter' );
 
 class plgSystemOutboundTracking extends JPlugin {
 
@@ -18,8 +19,9 @@ function plgSystemOutboundTracking(&$subject, $params) {
  
 	parent::__construct($subject, $params); 
     
-	$mode = $this->params->def('mode', 1);
-	
+	$this->plugin = &JPluginHelper::getPlugin('system', 'outboundtracking');
+    
+	$this->params = new JParameter($this->plugin->params);
 }
 
 function onAfterRender(){
@@ -91,6 +93,6 @@ function onAfterRender(){
 	
 	return;
  
- }
+}
  
 }
