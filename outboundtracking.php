@@ -98,7 +98,7 @@ function onAfterRender(){
 		
 		function main() {
 			if (typeof jQuery === 'undefined') {
-				console.log('ERROR: jQuery not loaded.');
+				throw 'ERROR: jQuery not loaded.';
 			}
 		
 			(function($) {
