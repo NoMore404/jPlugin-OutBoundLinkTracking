@@ -103,6 +103,8 @@ function onAfterRender(){
 		
 			(function($) {
 				$(function() {
+					var _gaq = _gaq || [];
+					
 					$('a').each(function() {
 						hostname = new RegExp(location.host);
 		
