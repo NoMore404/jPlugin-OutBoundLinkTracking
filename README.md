@@ -17,6 +17,7 @@ How to :
 
 To Do :
 
-* Check if jQuery is loaded, if not then load
-* Check if GA.js is loaded, if not then load
-* Console.log feedback as a test?!
+* Check if jQuery is loaded, if not then load : DONE
+* Check if GA.js is loaded, if not then create queue : DONE
+* Console.log feedback as a test-modus ?!
+* Add custom classes to trigger events
