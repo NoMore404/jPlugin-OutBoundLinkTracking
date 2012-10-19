@@ -16,14 +16,17 @@
 	</description>	
 	<files>
 		<filename plugin="outboundtracking">outboundtracking.php</filename>
-		<filename plugin="outboundtracking">index.html</filename>
 	</files>
 	<config>
 	  <fields name="params" addfieldpath="/plugins/system">
 	  	<fieldset name="basic">
-		  <field name="spacer1" type="spacer" default="" label="Google Analytics ID" description="" />
+		  <field name="spacer1" type="spacer" default="" label="The plugin needs Google Analytics to function, if you did not include the Google Analytics script using another method your can include Google Analytics using this plugin. If you want this plugin to load the Google Analytics script for you, then provide your Google Analytics ID in the textbox below. If you already have Google Analytics running on your site, then DO NOT provide your Google Analytics ID, for it will load Google Analytics twice." description="" />
 		  <field name="googleid" type="text" default="" label="Google Analytics ID" description="Enter your Google Analytics ID (UA-XXXXX-X)"/>
-		  <field name="spacer2" type="spacer" default="" label="Would you like to load jQuery?" description="" />
+   		  <field name="spacer" type="spacer" default="" label="" description="" />
+   		  <field name="class1info" type="spacer" default="" label="If you want to trigger a special custom event in Google Analytics, you will need to define a class on wich the plugin will connect the event trigger." description="" />
+		  <field name="class1" type="text" default="" label="Custom Class 1" description="Enter here a custom class to define a custom event" />
+  		  <field name="spacer" type="spacer" default="" label="" description="" />
+		  <field name="debug" type="checkbox" value="1" label="Debug Mode" description="Check for Debug Mode, we will output debug information to console.log"/>
 		</fieldset>		
 	  </fields>
 	</config>		

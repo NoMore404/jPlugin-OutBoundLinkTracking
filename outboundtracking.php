@@ -55,14 +55,33 @@ function onAfterRender(){
 				</script>";   
 		}
 		
+		//Declaring the debug stuff here to keep my JS clean and easy to read
+		
+		if ( $this->params->get('debug')){
+			
+			//Precaution in case console isn't declared
+			$debugaction1 = "
+				if( typeof(console) === 'undefined' ) {
+    				var console = {}
+    				console.log = console.error = console.info = console.debug = console.warn = console.trace = console.dir = console.dirxml = console.group = console.groupEnd = console.time = console.timeEnd = console.assert = console.profile = function() {};
+				};
+			";
+			$debugaction2 = "console.log('Debug Mode On');";
+			$debugaction3 = "console.log('trying fallback microsoft CDN');";
+			$debugaction4 = "console.log('Error Loading jQuery from CDN');";
+			$debugaction5 = "console.log('GA Click Tracking Plugin Activated');";
+			$debugaction6 = "console.log('Click Event Registerd');";
+			
+		}
+		  
 		$outboundtrackingscript .="
 		<script>
+		
+		". $debugaction1 ."
+ 
 		// GA Outbound Cick Tracking - by No More 404
 		
-		if( typeof(console) === 'undefined' ) {
-    		var console = {}
-    		console.log = console.error = console.info = console.debug = console.warn = console.trace = console.dir = console.dirxml = console.group = console.groupEnd = console.time = console.timeEnd = console.assert = console.profile = function() {};
-		};
+		". $debugaction2 ."
 		
 		if (typeof jQuery === 'undefined') {
 			loadjQuery('https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', verifyJQueryCdnLoaded);
@@ -73,7 +92,7 @@ function onAfterRender(){
 		function verifyJQueryCdnLoaded() {
 			if (typeof jQuery === 'undefined') {
 				loadjQuery('http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js', main);
-				console.log('trying fallback microsoft CDN');
+				". $debugaction3 ."
 			} else {
 				main();
 			}
@@ -88,7 +107,7 @@ function onAfterRender(){
 				if (this.readyState == 'complete' || this.readyState == 'loaded') callback();
 			}
 			script_tag.onerror = function() {
-				console.log('Error Loading jQuery from CDN')
+				". $debugaction4 ."
 			}
 			document.getElementsByTagName('head')[0].appendChild(script_tag);
 		}
@@ -102,7 +121,7 @@ function onAfterRender(){
 				$(function() {
 					var _gaq = _gaq || [];
 					
-					console.log('GA Click Tracking Plugin Activated');
+					". $debugaction5 ."
 					
 					$('a').each(function() {
 						hostname = new RegExp(location.host);
@@ -119,6 +138,7 @@ function onAfterRender(){
 						else {
 							$(this).click( function() {
 								_gaq.push(['_trackEvent', 'OutboundLink', 'Click', this.href]);
+								". $debugaction6 ."
 							});
 						}
 					});
