@@ -1,7 +1,7 @@
-Joomla 1.5 Plugin - OutBoundLinkTracking
+Joomla 1.5 Plugin - OutBound Link Tracking
 ====================================
 
->Joomla Plugin to track outbound links in Google Analytics.
+Joomla Plugin to track outbound links in Google Analytics.
 
 The plugin wil add the Google Analytics a-sync tracking code if you enter your Google Analytics ID in the plugin. The plugin will only function if the Google Analytics script is loaded. The plugin will not load jQuery so you will need to add the jQuery library for it to start functioning.
 
@@ -15,4 +15,11 @@ How to :
 * Then go to the "Plug-in Manager" and find the plugin
 * Now you can click enable to enable it or click on the plugin name to set your Google Analytics ID
 
-<http://www.nomore404.nl>
+To Do :
+
+* Check if jQuery is loaded, if not then load : DONE 1.5
+* Check if GA.js is loaded, if not then create queue : DONE 1.5
+* Console.log feedback as a test-modus : DONE 1.5
+* Add custom classes to trigger events : W.I.P.
+
+http://www.nomore404.nl
