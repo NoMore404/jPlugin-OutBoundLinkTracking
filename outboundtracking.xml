@@ -22,5 +22,7 @@
 	  <param name="@spacer1" type="spacer" default="Include Google Analytics:" label="" description="" />  
 	  <param name="googleid" type="text" default="" label="Google Analytics ID" description="Enter your Google Analytics ID (UA-XXXXX-X)"/>
 	  <param name="@spacer2" type="spacer" default="Include jQuery:" label="" description="" />
+	  <field name="spacer" type="spacer" default="" label="" description="" />
+	  <field name="debug" type="checkbox" value="1" label="Debug Mode" description="Check for Debug Mode, we will output debug information to console.log"/>
   </params>		
 </install>
