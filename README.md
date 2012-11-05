@@ -21,3 +21,5 @@ To Do :
 * Check if GA.js is loaded, if not then create queue : DONE 1.5
 * Console.log feedback as a test-modus : DONE 1.6
 * Add custom classes to trigger events : W.I.P.
+
+http://www.nomore404.nl
