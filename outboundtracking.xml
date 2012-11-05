@@ -24,6 +24,8 @@
 		  <field name="spacer1" type="spacer" default="" label="Include Google Analytics" description="" />
 		  <field name="googleid" type="text" default="" label="Google Analytics ID" description="Enter your Google Analytics ID (UA-XXXXX-X)"/>
 		  <field name="spacer2" type="spacer" default="" label="Include jQuery" description="" />
+		  <field name="spacer" type="spacer" default="" label="" description="" />
+		  <field name="debug" type="checkbox" value="1" label="Debug Mode" description="Check for Debug Mode, we will output debug information to console.log"/>
 		</fieldset>		
 	  </fields>
 	</config>		
